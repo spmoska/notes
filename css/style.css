@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+*, *:before, *:after {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1300px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.note__body {
+  max-width: 250px;
+  height: 250px;
+  padding: 20px;
+  margin: 0 0 0 30px;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+
+.main .main__content .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .main__content .header .title {
+  padding: 30px 0 30px 30px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.main .main__content .header .current__date {
+  font-size: 18px;
+}
+
+.main .main__content .notes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .main__content .notes .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .main__content .notes .list .list__item .note__body {
+  position: relative;
+}
+
+.main .main__content .notes .list .list__item .note__body .note__title {
+  font-weight: 700;
+}
+
+.main .main__content .notes .list .list__item .note__body .note__text__min {
+  margin: 15px 0 0 0;
+}
+
+.main .main__content .notes .list .list__item .note__body .note__body__menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: none;
+  border-radius: 18px;
+}
+
+.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .animate__animated.animate__bounceIn.edit,
+.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .animate__animated.animate__bounceIn.delete {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  background-color: #3db67b;
+  border: none;
+  border-radius: 18px;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+  cursor: pointer;
+}
+
+.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .animate__animated.animate__bounceIn.edit:hover {
+  background-color: #6ABD95;
+}
+
+.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .animate__animated.animate__bounceIn.delete {
+  margin: 15px 0 0 0;
+  background-color: #cf5d5d;
+}
+
+.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .animate__animated.animate__bounceIn.delete:hover {
+  background-color: #FF7C7C;
+}
+
+.main .main__content .notes .list .list__item .note__body .note__body__menu.active {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.main .main__content .notes .list .list__item .date {
+  text-align: center;
+  margin: 8px 0 0 30px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main .main__content .notes .list .list__item:hover .note__body {
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.main .main__content .notes .list .list__item:hover .date {
+  text-decoration: underline;
+}
+
+.main .main__content .notes .new__note .note__body {
+  width: 250px;
+}
+
+.main .main__content .notes .new__note .note__body span {
+  position: relative;
+  top: 50%;
+  left: 33%;
+}
+
+.main .main__content .notes .new__note .note__body span::after, .main .main__content .notes .new__note .note__body span::before {
+  position: absolute;
+  content: '';
+  width: 90px;
+  height: 2px;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.08);
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+
+.main .main__content .notes .new__note .note__body span::before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.main .main__content .notes .new__note:hover .note__body {
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.main .main__content .notes .new__note:hover span::after, .main .main__content .notes .new__note:hover span::before {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+/*# sourceMappingURL=style.css.map */
