@@ -203,30 +203,73 @@
   top: 10%;
   left: 0;
   background-color: #fff;
-  border: 2px solid rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
 }
 
-.main .main__content .notepad #note__text, .main .main__content .notepad #note__title {
-  width: calc(100vw - 10);
-  min-height: 40px;
+.main .main__content .notepad form {
+  height: 100%;
 }
 
-.main .main__content .notepad .active {
-  background-color: lightblue;
+.main .main__content .notepad form #note__title, .main .main__content .notepad form #note__text {
+  padding: 10px;
+  margin: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  font-size: 16px;
 }
 
-.main .main__content .notepad .boldi {
+.main .main__content .notepad form .notepad__editor {
+  position: relative;
+  height: 90%;
+}
+
+.main .main__content .notepad form .notepad__editor #note__text {
+  height: 90%;
+  margin-top: 0;
+}
+
+.main .main__content .notepad form .notepad__editor .buttons {
+  position: absolute;
+  top: -35px;
+  right: 20px;
+  z-index: 1;
+}
+
+.main .main__content .notepad form .notepad__editor .buttons .mode {
+  background-color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.main .main__content .notepad form .notepad__editor .buttons .mode:nth-child(1) {
   font-weight: bold;
 }
 
-.main .main__content .notepad .cursiv {
+.main .main__content .notepad form .notepad__editor .buttons .mode:nth-child(2) {
   font-style: italic;
 }
 
-.main .main__content .notepad .underli {
+.main .main__content .notepad form .notepad__editor .buttons .mode:nth-child(3) {
+  text-decoration: underline;
+}
+
+.main .main__content .notepad form .notepad__editor .buttons .mode.active {
+  border-color: #000;
+}
+
+.main .main__content .notepad form .notepad__editor .boldi {
+  font-weight: bold;
+}
+
+.main .main__content .notepad form .notepad__editor .cursiv {
+  font-style: italic;
+}
+
+.main .main__content .notepad form .notepad__editor .underli {
   text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */

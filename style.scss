@@ -204,29 +204,69 @@
             top: 10%;
             left: 0;
             background-color: #fff;
-            border: 2px solid rgba(0, 0, 0, 0.15);
-            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
             border-radius: 6px;
-            #note__text, #note__title {
-                width: calc(100vw - 10);
-                min-height: 40px;
-              }
-              
-              .active {
-                background-color: lightblue;
-              }
-              
-              .boldi {
-                font-weight: bold;
-              }
-              
-              .cursiv {
-                font-style: italic;
-              }
-              
-              .underli {
-                text-decoration: underline;
-            }
+
+            form {
+                height: 100%;
+                #note__title, #note__text {
+                    padding: 10px;
+                    margin: 20px;
+                    border: 2px solid rgba(0, 0, 0, 0.15);
+                    border-radius: 8px;
+                    font-size: 16px;
+                }
+                
+                .notepad__editor {
+                    position: relative;
+                    height: 90%;
+                    #note__text {
+                        height: 90%;
+                        margin-top: 0;
+                    }
+    
+                    .buttons {
+                        position: absolute;
+                        top: -35px;
+                        right: 20px;
+                        z-index: 1;
+                        .mode {
+                            background-color: #fff;
+                            border: 2px solid rgba(0, 0, 0, 0.15);
+                            border-radius: 5px;
+                            padding: 5px;
+                            &:nth-child(1) {
+                                font-weight: bold;
+                            }
+                            &:nth-child(2) {
+                                font-style: italic;
+                            }
+                            &:nth-child(3) {
+                                text-decoration: underline;
+                            }
+                            &.active {
+                                border-color: #000;
+                            }
+                        }
+                    }
+                      
+                    .boldi {
+                        font-weight: bold;
+                    }
+                      
+                    .cursiv {
+                        font-style: italic;
+                    }
+                      
+                    .underli {
+                        text-decoration: underline;
+                    }
+
+                } //notepad__editor
+
+            } //form
+    
         } //notepad
 
     } //main__content

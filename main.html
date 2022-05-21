@@ -80,13 +80,22 @@
                         </div> <!--/notes-->
 
                         <div class="notepad">
-                            <div id="note__title" contenteditable="true" spellcheck="false"></div>
-                            <div id="note__text" contenteditable="true" spellcheck="false"></div>
-                            <button data-font="boldi" class="mode">Жирно</button>
-                            <button data-font="cursiv" class="mode">Курсив</button>
-                            <button data-font="underli" class="mode">Подчеркн</button>
-                        </div>
-
+                            <form action="" class="from">
+                                <div class="notepad__header">
+                                    <input type="text" id="note__title" contenteditable="true" spellcheck="false" placeholder="Заголовок">
+                                </div>
+                                <div class="notepad__editor">
+                                    <div type="text" id="note__text" contenteditable="true" spellcheck="false"></div>
+                                    <div class="buttons">
+                                        <input type="number" id="note__font__size" placeholder="16px">
+                                        <button type="button" data-font="boldi" class="mode">Ж</button>
+                                        <button type="button" data-font="cursiv" class="mode">К</button>
+                                        <button type="button" data-font="underli" class="mode">Ч</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div> <!-- /notepad -->
+                        
                     </div> <!--/main__content-->
 
                 </div> <!-- /container -->
