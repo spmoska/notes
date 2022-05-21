@@ -68,6 +68,7 @@
                             border-radius: 18px;
                             .buttons {
                                 position: absolute;
+                                display: none;
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%);
@@ -95,7 +96,9 @@
                                         background-color: #FF7C7C;
                                     }
                                 }
-                                
+                                &.active {
+                                    display: block;
+                                }
                             }
                             &.active {
                                 background-color: rgba(255, 255, 255, 0.8);

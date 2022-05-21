@@ -89,6 +89,7 @@
 
 .main .main__content .notes .list .list__item .note__body .note__body__menu .buttons {
   position: absolute;
+  display: none;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -122,6 +123,10 @@
 
 .main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .animate__animated.animate__bounceIn.delete:hover {
   background-color: #FF7C7C;
+}
+
+.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons.active {
+  display: block;
 }
 
 .main .main__content .notes .list .list__item .note__body .note__body__menu.active {
