@@ -8,7 +8,7 @@
 }
 
 .wrapper {
-	min-height: 100%;
+	height: 100vh;
 	overflow: hidden;
 }
 
@@ -18,7 +18,7 @@
     margin: 0 auto;
 }
 
-.note__body {
+%note__body {
     max-width: 250px;
     height: 250px;
     padding: 20px;
@@ -30,8 +30,11 @@
 }
 
 .main {
+    height: 100%;
 
     .main__content {
+        position: relative;
+        height: 100%;
 
         .header {
             display: flex;
@@ -70,6 +73,7 @@
 
                     .note__body {
                         position: relative;
+                        @extend %note__body;
 
                         .note__title {
                             font-weight: 700;
@@ -163,6 +167,7 @@
 
                 .note__body {
                     width: 250px;
+                    @extend %note__body;
 
                     span {
                         position: relative;
@@ -190,6 +195,39 @@
             } //new__note
 
         } //notes
+
+        .notepad {
+            position: absolute;
+            width: 100%;
+            height: 80%;
+            z-index: 1;
+            top: 10%;
+            left: 0;
+            background-color: #fff;
+            border: 2px solid rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+            #note__text, #note__title {
+                width: calc(100vw - 10);
+                min-height: 40px;
+              }
+              
+              .active {
+                background-color: lightblue;
+              }
+              
+              .boldi {
+                font-weight: bold;
+              }
+              
+              .cursiv {
+                font-style: italic;
+              }
+              
+              .underli {
+                text-decoration: underline;
+            }
+        } //notepad
 
     } //main__content
 
