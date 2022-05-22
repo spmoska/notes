@@ -41,34 +41,6 @@
                                     <div class="date">Дата создания</div>
                                 </div>
 
-                                <div class="list__item">
-                                    <div class="note__body">
-                                        <h3 class="note__title">Заголовок</h3>
-                                        <p class="note__text__min">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content </p>
-                                        <div class="note__body__menu">
-                                            <div class="buttons">
-                                                <button class="animate__animated animate__bounceIn edit" method="post">Редактировать</button>
-                                                <button class="animate__animated animate__bounceIn delete" method="post">Удалить</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="date">Дата создания</div>
-                                </div>
-
-                                <div class="list__item">
-                                    <div class="note__body">
-                                        <h3 class="note__title">Заголовок</h3>
-                                        <p class="note__text__min">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content </p>
-                                        <div class="note__body__menu">
-                                            <div class="buttons">
-                                                <button class="animate__animated animate__bounceIn edit" method="post">Редактировать</button>
-                                                <button class="animate__animated animate__bounceIn delete" method="post">Удалить</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="date">Дата создания</div>
-                                </div>
-
                             </div> <!--/list-->
 
                             <div class="new__note">
@@ -79,7 +51,7 @@
 
                         </div> <!--/notes-->
 
-                        <div class="notepad">
+                        <div class="animate__animated animate__backInDown notepad">
                             <form action="" class="from">
                                 <div class="notepad__header">
                                     <input type="text" id="note__title" contenteditable="true" spellcheck="false" placeholder="Заголовок">
@@ -87,11 +59,14 @@
                                 <div class="notepad__editor">
                                     <div type="text" id="note__text" contenteditable="true" spellcheck="false"></div>
                                     <div class="buttons">
-                                        <input type="number" id="note__font__size" placeholder="16px">
+                                        <input type="number" min="1" max="52" id="note__font__size" value="14">
                                         <button type="button" data-font="boldi" class="mode">Ж</button>
                                         <button type="button" data-font="cursiv" class="mode">К</button>
                                         <button type="button" data-font="underli" class="mode">Ч</button>
                                     </div>
+                                </div>
+                                <div class="notepad__footer">
+                                    <button type="button" id="save">Сохранить</button>
                                 </div>
                             </form>
                         </div> <!-- /notepad -->

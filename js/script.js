@@ -14,4 +14,16 @@ $(document).ready(function() {
         $(".buttons", this).toggleClass("active");
     })
 
+    $(".new__note").click(function() {
+        $(".notepad").addClass("active");
+    })
+
+    $(".edit").click(function() {
+        $(".notepad").addClass("active");
+    })
+
+    $("#save").click(function() {
+        $(".notepad").removeClass("active");
+    })
+
 })

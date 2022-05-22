@@ -124,8 +124,8 @@
   display: block;
 }
 
-.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .animate__animated.animate__bounceIn.edit,
-.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .animate__animated.animate__bounceIn.delete {
+.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .edit,
+.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .delete {
   width: 100%;
   padding: 10px 20px;
   font-size: 16px;
@@ -139,16 +139,16 @@
   cursor: pointer;
 }
 
-.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .animate__animated.animate__bounceIn.edit:hover {
+.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .edit:hover {
   background-color: #6ABD95;
 }
 
-.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .animate__animated.animate__bounceIn.delete {
+.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .delete {
   margin: 15px 0 0 0;
   background-color: #cf5d5d;
 }
 
-.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .animate__animated.animate__bounceIn.delete:hover {
+.main .main__content .notes .list .list__item .note__body .note__body__menu .buttons .delete:hover {
   background-color: #FF7C7C;
 }
 
@@ -196,6 +196,7 @@
 }
 
 .main .main__content .notepad {
+  display: none;
   position: absolute;
   width: 100%;
   height: 80%;
@@ -207,6 +208,10 @@
   -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
+}
+
+.main .main__content .notepad.active {
+  display: block;
 }
 
 .main .main__content .notepad form {
@@ -223,11 +228,12 @@
 
 .main .main__content .notepad form .notepad__editor {
   position: relative;
-  height: 90%;
+  height: 85%;
 }
 
 .main .main__content .notepad form .notepad__editor #note__text {
-  height: 90%;
+  font-size: 14px;
+  height: 95%;
   margin-top: 0;
 }
 
@@ -236,6 +242,13 @@
   top: -35px;
   right: 20px;
   z-index: 1;
+}
+
+.main .main__content .notepad form .notepad__editor .buttons #note__font__size {
+  background-color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .main .main__content .notepad form .notepad__editor .buttons .mode {
@@ -271,5 +284,21 @@
 
 .main .main__content .notepad form .notepad__editor .underli {
   text-decoration: underline;
+}
+
+.main .main__content .notepad form .notepad__footer {
+  position: relative;
+}
+
+.main .main__content .notepad form .notepad__footer #save {
+  position: absolute;
+  right: 20px;
+  padding: 5px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #3db67b;
+  border: none;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=style.css.map */
