@@ -17,7 +17,7 @@
 }
 
 .main .main__content .notes .list .list__item .note__body, .main .main__content .notes .new__note .note__body {
-  max-width: 250px;
+  width: 250px;
   height: 250px;
   padding: 20px;
   margin: 0 0 0 30px;
@@ -232,9 +232,11 @@
 }
 
 .main .main__content .notepad form .notepad__editor #note__text {
+  width: 95%;
   font-size: 14px;
   height: 95%;
   margin-top: 0;
+  resize: none;
 }
 
 .main .main__content .notepad form .notepad__editor .buttons {

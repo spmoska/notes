@@ -19,7 +19,7 @@
 }
 
 %note__body {
-    max-width: 250px;
+    width: 250px;
     height: 250px;
     padding: 20px;
     margin: 0 0 0 30px;
@@ -226,9 +226,11 @@
                     position: relative;
                     height: 85%;
                     #note__text {
+                        width: 95%;
                         font-size: 14px;
                         height: 95%;
                         margin-top: 0;
+                        resize: none;
                     }
     
                     .buttons {
