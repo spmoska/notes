@@ -21,7 +21,10 @@ $(document).ready(function() {
     $(".edit").click(function() {
         $(".notepad").addClass("active");
     })
-
+    
+    $(".delete").click(function() {
+        $(this).parent().parent().parent().parent().remove();
+    })
     $("#save").click(function() {
         $(".notepad").removeClass("active");
     })
