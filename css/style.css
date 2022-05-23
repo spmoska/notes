@@ -229,6 +229,39 @@
   font-size: 16px;
 }
 
+.main .main__content .notepad form .notepad__header {
+  position: relative;
+}
+
+.main .main__content .notepad form .notepad__header .exit {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.main .main__content .notepad form .notepad__header .exit::after, .main .main__content .notepad form .notepad__header .exit::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main .main__content .notepad form .notepad__header .exit::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.main .main__content .notepad form .notepad__header .exit::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
 .main .main__content .notepad form .notepad__editor {
   position: relative;
   height: 85%;

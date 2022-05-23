@@ -77,24 +77,10 @@ $(document).ready(function() {
         }
     }
 
-    $("#save").click(function() {
-        //Проверяем есть ли у блока кнопок класс active, если есть, то...
-        if (($(".buttons").hasClass("active"))) {
-            //...Удаляем запись из localStorage с индексом родителя кнопки edit...
-            localStorage.removeItem(parentOfButton.index()-1);
-            //...Записываем в localStorage с индексом родителя кнопки edit...
-            localStorage.setItem(parentOfButton.index()-1, JSON.stringify(getNote()));
-            $(".note__body__menu").removeClass("active");
-            $(".buttons").removeClass("active");
-        }
-        //...иначе записываем данные из полей редактора и создаем новую миниатюру (она создается при обновлении страницы)
-        else {
-            localStorage.setItem(list__item.length, JSON.stringify(getNote()));
-        }
+    $(".current__date").text(date());
+    $(".exit").click(function() {
         $(".notepad").removeClass("active");
     })
-
-    $(".current__date").text(date());
 
     $(".list__item").click(function() {
         $(".note__body__menu").removeClass("active");
@@ -132,5 +118,22 @@ $(document).ready(function() {
             }
         }
         $(this).parent().parent().parent().parent().remove();
+    });
+
+    $("#save").click(function() {
+        //Проверяем есть ли у блока кнопок класс active, если есть, то...
+        if (($(".buttons").hasClass("active"))) {
+            //...Удаляем запись из localStorage с индексом родителя кнопки edit...
+            localStorage.removeItem(parentOfButton.index()-1);
+            //...Записываем в localStorage с индексом родителя кнопки edit...
+            localStorage.setItem(parentOfButton.index()-1, JSON.stringify(getNote()));
+            $(".note__body__menu").removeClass("active");
+            $(".buttons").removeClass("active");
+        }
+        //...иначе записываем данные из полей редактора и создаем новую миниатюру (она создается при обновлении страницы)
+        else {
+            localStorage.setItem(list__item.length, JSON.stringify(getNote()));
+        }
+        $(".notepad").removeClass("active");
     });
 })

@@ -222,6 +222,33 @@
                     border-radius: 8px;
                     font-size: 16px;
                 }
+
+                .notepad__header {
+                    position: relative;
+                    .exit {
+                        display: block;
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        top: 20px;
+                        right: 20px;
+                        cursor: pointer;
+                        &::after, &::before {
+                            position: absolute;
+                            content: "";
+                            top: 50%;
+                            width: 20px;
+                            height: 2px;
+                            background-color: rgba(0, 0, 0, 0.5);
+                        }
+                        &::after {
+                            transform: rotate(45deg);
+                        }
+                        &::before {
+                            transform: rotate(135deg);
+                        }
+                    }
+                }
                 
                 .notepad__editor {
                     position: relative;
