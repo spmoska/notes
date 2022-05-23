@@ -7,7 +7,6 @@
 
 .wrapper {
   height: 100vh;
-  overflow: hidden;
 }
 
 .container {
@@ -64,12 +63,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .main .main__content .notes .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .main .main__content .notes .list .list__item:hover .note__body {

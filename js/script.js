@@ -1,5 +1,7 @@
 $(document).ready(function() {
     let list__item = document.getElementsByClassName("list__item");
+    let parentOfButton;
+    
     if (localStorage.length != 0) {
         for (var i = 0; i < localStorage.length; i++) {
             let note__info = JSON.parse(localStorage.getItem(i));
@@ -9,6 +11,7 @@ $(document).ready(function() {
             $(".date").eq(i).text(note__info.date);
         }
     }
+
     function date() {
         let curDate = new Date(),
         day = curDate.getDate(),
@@ -27,35 +30,54 @@ $(document).ready(function() {
             date: date()
         };
         return note;
+    };
+
+    function addNote() {
+        
     }
 
     $("#save").click(function() {
-        localStorage.setItem(list__item.length, JSON.stringify(getNote()));
+        
+        if (($(".buttons").hasClass("active"))) {
+            localStorage.removeItem(parentOfButton.index()-1);
+            localStorage.setItem(parentOfButton.index()-1, JSON.stringify(getNote()));
+            $(".note__body__menu").removeClass("active");
+            $(".buttons").removeClass("active");
+        }
+        else {
+            localStorage.setItem(list__item.length, JSON.stringify(getNote()));
+        }
         $(".notepad").removeClass("active");
-        $(".note__body__menu").removeClass("active");
-        $(".buttons").removeClass("active");
     })
 
     $(".current__date").text(date());
 
     $(".list__item").click(function() {
+        $(".note__body__menu").removeClass("active");
+        $(".buttons").removeClass("active");
         $(".note__body__menu", this).addClass("active");
         $(".buttons", this).addClass("active");
     });
 
     $(".new__note").click(function() {
         $(".notepad").addClass("active");
+        $(".note__body__menu").removeClass("active");
+        $(".buttons").removeClass("active");
     });
 
     $(".edit").click(function() {
         $(".notepad").addClass("active");
+        parentOfButton = $(this).parent().parent().parent().parent();
+        note__info = JSON.parse(localStorage.getItem(parentOfButton.index()-1));
+        $(".notepad__header").children().val(note__info.title);
+        $(".notepad__editor").children().val(note__info.text);
     });
     
     $(".delete").click(function() {
-        let parentOfButton = $(this).parent().parent().parent().parent();
-        localStorage.removeItem(parentOfButton.index());
+        parentOfButton = $(this).parent().parent().parent().parent();
+        localStorage.removeItem(parentOfButton.index()-1);
         for (let i = 0; i < localStorage.length + 1; i++) {
-            if(i > parentOfButton.index()) {
+            if(i > parentOfButton.index()-1) {
                 localStorage.setItem(i - 1, localStorage.getItem(i));
                 localStorage.removeItem(i);
             }

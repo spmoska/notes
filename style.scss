@@ -9,7 +9,6 @@
 
 .wrapper {
 	height: 100vh;
-	overflow: hidden;
 }
 
 .container {
@@ -55,9 +54,11 @@
 
         .notes {
             display: flex;
+            flex-wrap: wrap;
 
             .list {
                 display: flex;
+                flex-wrap: wrap;
 
                 .list__item {
                     &:hover {
