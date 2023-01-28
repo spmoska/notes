@@ -7,3 +7,6 @@ The application has the ability to:
 3. removal
 
 All data about the notes is stored in localstorage
+
+
+https://1aga1.github.io/notes/
