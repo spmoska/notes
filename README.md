@@ -9,4 +9,4 @@ The application has the ability to:
 All data about the notes is stored in localstorage
 
 
-https://1aga1.github.io/notes/
+https://spmoska.github.io/notes/
