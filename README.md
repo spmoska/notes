@@ -1,12 +1,14 @@
-# Notes
-This project was the final task before the interview at "Severstal"
+# Записки
 
-The application has the ability to:
-1. creating a note
-2. editing a note
-3. removal
+## Приложение разработано с помощью:
+- [`JavaScript`](https://ecma-international.org/publications-and-standards/standards/ecma-262/ "`JavaScript`")
 
-All data about the notes is stored in localstorage
+## Начало
+Чтобы запустить прокект локально:
 
+- Склонировать репозиторий
+- Открыть index.html
 
-https://spmoska.github.io/notes/
+## Демонстрация
+Приложение запущено на GitHub Pages <br>
+Ссылка: https://ppvvdanil.github.io/notes/
